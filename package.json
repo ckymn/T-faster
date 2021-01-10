@@ -1,0 +1,23 @@
+{
+  "name": "t-faster",
+  "version": "1.0.0",
+  "description": "this is a keyboard speed test game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckymn/T-faster.git"
+  },
+  "author": "ckymn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ckymn/T-faster/issues"
+  },
+  "homepage": "https://github.com/ckymn/T-faster#readme",
+  "devDependencies": {
+    "webpack": "^5.12.3",
+    "webpack-cli": "^4.3.1"
+  }
+}
