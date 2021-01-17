@@ -1,0 +1,45 @@
+
+extends ./root.pug
+
+block body
+  main
+    h1 Typer
+
+    .top
+      div(id="start_text")
+        span Type "
+        b start
+        span " to play
+
+      div(id="current_word").noselect
+
+      div(id="time") 0s
+
+    input(id="text_field" type="text")
+
+    div(id='score_wrapper')
+      span.var-name SCORE
+      span.equals =
+      span(id="score").val 0
+      span.semi ;
+
+    .bottom
+      .highscore
+        span.var-name highscore
+        span.equals =
+        span(id="highscore") 0
+        span.semi ;
+
+
+    footer#footer
+      a(href="help.pug") help
+      //- a(href="leaderboards.pug") scores
+      a(href="https://github.com/ckymn/T-faster" target="_blank") github
+
+block script
+  script(src="~/scripts/index.js")
+
+block styles
+  link(rel="stylesheet" href="~/styles/index.scss")
+  link(rel="stylesheet" href="~/styles/inputs.scss")
+  link(rel="stylesheet" href="~/styles/footer.scss")

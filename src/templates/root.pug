@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        meta(name="theme-color" content="#232323")
+
+
+        link(rel="apple-touch-icon" sizes="180x180" href="~/assets/icons/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="~/assets/icons/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="~/assets/icons/favicon-16x16.png")
+
+        //- ios status bar
+        meta(name="apple-mobile-web-app-status-bar-style" content="black-translucent")
+
+        //- Manifest Dosyasi
+        link(rel="manifest" href="manifest.webmanifest")
+
+        //- SEO
+        meta(name="description" content="The 10-second typing game. Are you the fastest typer out of all your friends?")
+        meta(name="keywords" content="typer,typing,game,pwa,app,ios,android,keyboard")
+
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P:wght@400;700&display=swap")
+        link(rel="stylesheet" href="./styles/normalize.css")
+        link(rel="stylesheet" href="./styles/index.scss")
+        block styles
+
+        title T-faster
+    body
+        block body
+
+        script.
+            if (process.env.NODE_ENV === 'development') {
+                console.log('dev: no sw')
+            } else {
+                // register service worker
+            console.log('prod: sw')
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    //- const sw = '/service-worker.js';
+                    const sw = "../service-worker.js"
+                navigator.serviceWorker.register(sw);
+        })
+    }
+}
+    //- remove anti cheat?
+    script(src="~/scripts/anticheat.js")
+    block script
