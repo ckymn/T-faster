@@ -1,0 +1,26 @@
+extends ./root.pug
+
+block body
+    main
+        h1 Highscores
+
+        a(href="/").back back
+
+        article
+
+            p Leaderboards have been removed.
+
+            p Cheating and XSS are okay. I, as a developer, learned a lot from this, so thank you to whoever cheated and took advantage of my poor sanitization!
+
+            p What's not okay is racism and discriminatory comments in the username field. I know that it is easy to handle and prevent this. But at the end I just decided to remove high scores.
+
+            p The leaderboards took away my focus from the main typing game.
+
+            p
+                b Thank you to whoever participated.
+
+
+
+block styles
+    link(rel="stylesheet" href="~/styles/index.scss")
+    link(rel="stylesheet" href="~/styles/page.scss")
